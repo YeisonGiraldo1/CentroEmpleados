@@ -1,0 +1,45 @@
+﻿@model EmpleadoModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+  Editar Empleado
+  </div>
+  <div class="card-body">
+  <form asp-action="Editar" asp-controller="Mantenedor" method="post">
+       <input asp-for="Id" type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nombres</label>
+    <input asp-for="Nombres" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <span asp-validation-for="Nombres" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Apellidos</label>
+    <input  asp-for="Apellidos"  type="text" class="form-control" id="exampleInputPassword1">
+    <span asp-validation-for="Apellidos" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Documento</label>
+    <input  asp-for="Documento"  type="number" class="form-control" id="exampleInputPassword1">
+    <span asp-validation-for="Documento" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Telefono</label>
+    <input  asp-for="Telefono"  type="number" class="form-control" id="exampleInputPassword1">
+    <span asp-validation-for="Telefono" class="text-danger"></span>
+  </div>
+
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Correo</label>
+    <input  asp-for="Correo"  type="email" class="form-control" id="exampleInputPassword1">
+    <span asp-validation-for="Correo" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-success">Editar</button>
+  <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warning">volver a la lista</a>
+</form>
+  </div>
+</div>
